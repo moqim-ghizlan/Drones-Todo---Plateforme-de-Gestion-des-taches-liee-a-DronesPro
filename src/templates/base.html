@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    {% load static %}
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+      <link rel="icon" href="{% static './images/logo.png' %}" type="image/png">
+        <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+        <script defer  src="{% static 'assets/js/script.js' %}"></script>
+    <title>Todo list of Drones Pro</title>
+  </head>
+
+  <body class="h-100 w-100 bg-dark text-white">
+    {% block main %}
+    {% endblock main %}
+  </body>
+</html>

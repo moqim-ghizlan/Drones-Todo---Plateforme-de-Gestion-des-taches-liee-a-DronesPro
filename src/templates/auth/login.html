@@ -1,0 +1,25 @@
+{% extends '../base.html'%}
+{% block main %}
+{% load static %}
+<main class="container my-3 w-100 h-100">
+    <form method="POST" class="my-auto container d-flex flex-column justify-content-center align-content-center gap-2 px-4 py-2 border rounded">
+        <p class="mb-1 fs-3 text-center">Login</p>
+        {% csrf_token %}
+        <input id="inputEmail" class="form-control" name="email" placeholder="Email address" {% if email %}value="{{email}}"{% endif %} required="" autofocus="" type="email">
+        <input id="inputPassword"  name="password" class="form-control" placeholder="Password" required="" type="password">
+        <div class="checkbox mb-3">
+            <label>
+                <input value="remember-me" type="checkbox"> Remember me
+            </label>
+        </div>
+
+        <div class="errer">
+            <p class="mb-0 text-center text-danger">{{ error }}</p>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center">
+            <button class="normal-btn bg-success text-white px-3 py-2 rounded fs-5" type="submit">Sign in</button>
+        </div>
+    </form>
+</main>
+{% endblock %}
